@@ -131,6 +131,7 @@ def Fetch_all_Products_created_by_seller(owner,product_json_file):
             details.append(content[i])
     file.seek(0)
     file.truncate()
+    json.dump(content, file, indent = 1)
     file.close()
     return details
 
@@ -157,6 +158,7 @@ def Fetch_Product_By_ID(product_json_file,product_ID):
             details.append(content[i])
     file.seek(0)
     file.truncate()
+    json.dump(content, file, indent = 1)
     file.close()
     return details
 
@@ -235,6 +237,7 @@ def Add_item_to_cart(Username,product_ID,Quantity,gamers_json_file,booking_start
     file.close()
     file1.seek(0)
     file1.truncate()
+    json.dump(content1, file1, indent = 1)
     file1.close()
     return "True"
 
@@ -270,6 +273,7 @@ def View_Cart(Username,gamers_json_file):
                 cart.append(content[i]["Cart"])
     file.seek(0)
     file.truncate()
+    json.dump(content, file, indent = 1)
     file.close()
     return cart
 
@@ -327,6 +331,7 @@ def View_User_Details(gamers_json_file,Username):
             detail.append(content[i])
     file.seek(0)
     file.truncate()
+    json.dump(content, file, indent = 1)
     file.close()
     return detail
     
@@ -355,6 +360,7 @@ def Fetch_all_orders(orders_json_file,Username):
             details.append(content[i])
     file.seek(0)
     file.truncate()
+    json.dump(content, file, indent = 1)
     file.close()
     return details
 
